@@ -14,6 +14,9 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 ```
 k get services -n argocd
 kubectl port-forward service/argocd-server -n argocd 8080:443
+
+OR in case of docer and port forward to local IP
+hax@ubuntunode:~$ kubectl port-forward svc/argocd-server -n argocd 8080:443 --address 0.0.0.0
 ```
 
 ### Get Credentials
